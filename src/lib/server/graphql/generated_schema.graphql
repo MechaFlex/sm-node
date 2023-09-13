@@ -1,0 +1,23 @@
+input CreateUser {
+  firstName: String!
+  lastName: String!
+  nick: String!
+}
+
+type Mutation {
+  createUser(user: CreateUser!): Boolean!
+  deleteUser(id: String!): Boolean!
+}
+
+type Query {
+  users: [User!]!
+}
+
+type User {
+  firstName: String!
+  id: ID!
+  lastName: String!
+  name: String!
+  nameWithNick: String!
+  nick: String!
+}
